@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="icon" type="image/svg+xml" href="/img/NK_logo.svg">
+    <link rel="apple-touch-icon" href="/img/NK_logo.png">
+    <link rel="icon" type="image/png" href="/img/NK_logo.png">
+    <link href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAMAAAAKE/YAAAADAFBMVEX///9ycnIWFhavr69SUlL5
+    +fm9vb0AAADx8fEKCgo/Pz8wMDBjY2OQkJDn5+fT09MjIyOBgYHd3d2enp7JyckAAAAAAAAAAAAA
+    AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+    AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+    AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+    AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+    AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+    AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+    AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+    AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+    AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+    AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+    AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+    AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+    AAAAAAAAAAAAAABidk/aAAAACXBIWXMAAC4jAAAuIwF4pT92AAANdElEQVR4nO2cWWOjOhKFPyTE
+    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
+    MWPG/wz/AewVprsMGZKYAAAAAElFTkSuQmCC" rel="icon" type="image/x-icon" />
+    <title>Обучение маникюру в Гомеле - Nata Kornilova</title>
+    <meta name="description" content="Курсы маникюра в Гомеле. Индивидуальный подход к каждому, специально разработанная программа.">
+    <meta name="robots" content="index,follow">
+    <meta name="keywords" content="маникюр, обучение, Гомель, курсы маникюра">
+</head>
+<body>
+    <header class="header">
+        <div class="wrapper1">
+            <div class="header__top">
+                <div class="header__logo">
+                    <div class="header__logo-picture"><img src="img/NK_logo.svg" alt="owner_logo" class="header__logo-image"></div>
+                    <div class="header__logo-title">Nata Kornilova</div>
+                </div>
+                <nav class="header__nav nav">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#gallery" class="nav__link">Работы</a></li>
+                        <li class="nav__item"><a href="#testimonials" class="nav__link">Отзывы</a></li>
+                        <li class="nav__item"><a href="#video" class="nav__link">Видео</a></li>
+                        <li class="nav__item"><a href="#questions" class="nav__link">Вопросы</a></li>
+                        <li class="nav__item"><a href="#contacts" class="nav__link">Контакты</a></li>
+                    </ul>
+                    <button class="nav__button"><img class="nav__button-img" src="./img/icons/nav-open.svg" alt="Nav button"></button>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="wrapper">
+        <main class="main">
+            <section class="about">
+                <div class="about__description">
+                    <div class="about__description-name" ><span class="about__description-name--color-white">Natalia </span><br> Kornilo<span class="about__description-name--color">va</span></div>
+                    <h1 class="about__description-title" >Обучение маникюру в Гомеле по специально разработанной программе.<br> Индивидуальный подход к каждому, закрепление материала практической отработкой полученных знаний на модели.</h1>
+                    <a href="#contacts" class="about__description-btn btn">Записаться<span class="pulse"></span></a>
+                </div>
+                <div class="about__picture"  >
+                    <img src="img/about/about.jpg" alt="nail_photo">
+                </div>
+            </section>
+            <section class="about-teacher">
+                <div class="about-teacher__photo"  >
+                    <img src="img/about-teacher/photo.jpg" alt="Nata photo">
+                </div>
+                <div class="about-teacher__description description"  >
+                    <h3 class="title">Обо мне<span class="icon waving-hand"></span></h3>
+                    <div class="low-width">
+                        <div class="low-width__photo">
+                            <img src="img/about-teacher/photo.jpg" alt="Nata photo">
+                        </div>
+                        <div class="low-width__text">
+                            <p class="description__row">Я мастер маникюра уже более 5-ти лет. Начинала свою деятельность дома, пройдя первые попавшиеся курсы. Моя первая работа заняла 4,5 часа и оставляла желать лучшего. В тот момент мне казалось, что я не буду заниматься этим никогда.</p>
+                            <p class="description__row">Но все изменилось именно после качественных курсов маникюра. Этот момент стал точкой отсчета, т.к. перенятие опыта квалифицированного специалиста всегда позволяет овладеть нужными навыками и добиться своих целей быстрее.</p>
+                            <p class="description__row">Я собрала базу из ~40 постоянных клиентов и новых не брала около 2-х лет.<span class="dots">...</span></p>
+                        </div>
+                    </div>
+                    <div class="about-teacher__more">
+                        <p class="description__row">Когда маникюр стал моей основной деятельностью, за 2 месяца я набрала 70 клиентов, а спустя ещё 2 - у меня появилась своя студия.</p>
+                        <p class="description__row">Сейчас я обучаю быстрому и качественному маникюру, а также архитектуре ногтей и их реставрации.</p>
+                        <p class="description__row">Проанализировав весь свой путь, я поняла, что наилучший результат дают сильные курсы + практика + упорство. Буду рада поделится с Вами своим опытом, который поможет улучшить качество работ, работать быстро и поднять чек <span class="icon icon-arrow-up"></span></p>
+                        <p class="description__row">С подробной программой и стоимостью курса можете ознакомится ниже <span class="icon icon-arrow-down"></span></p>
+                    </div>
+                    <button class="about-teacher__more-btn" onclick="readMore()">Читать всё</button>
+                </div>
+                
+            </section>
+            <section   class="course">
+                <h3 class="course__programm-title title">Программы индивидуальных курсов</h3>
+                <div class="course__tabs tabs">
+                    <div class="tabs__nav">
+                        <div class="tabs__nav-item is-active" data-tab-name="tab-1"><span class="icon manicure-base"></span>Базовый (с нуля)</div>
+                        <div class="tabs__nav-item" data-tab-name="tab-2"><span class="icon manicure-prof"></span>Повышения квалификации</div>
+                    </div>
+                    <div class="tabs__content">
+                        <div class="tabs__content-item tab-1 is-active">
+
+                            <ul class="course-programm">
+
+                                <li class="course-programm__theory accordeon-item">
+                                    <div class="accordeon-item__trigger">ТЕОРИЯ </div>
+                                    <ul class="course-programm__theory-sublist accordeon-item__content">
+                                        <li class="course-programm__sublist-item">Строение ногтевой пластины;</li>
+                                        <li class="course-programm__sublist-item">Рабочее место и безопасность мастера маникюра;</li>
+                                        <li class="course-programm__sublist-item">Инструменты и оборудование;</li>
+                                        <li class="course-programm__sublist-item">Магазины с продукцией для ногтевого сервиса <br>(телеграмм-канал со всем описанием и ссылками на магазины, где и что лучше покупать);</li>
+                                        <li class="course-programm__sublist-item">Дезинфекция, ПСО, стерилизация, уход за инструментами;</li>
+                                    </ul>
+                                </li>
+                                <li class="course-programm__practice accordeon-item">
+                                    <div class="accordeon-item__trigger">ПРАКТИКА </div>
+                                    <ul class="course-programm__practice-sublist accordeon-item__content">
+                                        <li class="course-programm__sublist-item">Пошаговая схема снятия покрытия;</li>
+                                        <li class="course-programm__sublist-item">Схема опила квадрат/овал/миндаль;</li>
+                                        <li class="course-programm__sublist-item">Техника комбинированного маникюра с аппаратом и <img class="scissors" src="img/icons/scissors.svg" alt="scissors icon"> ножницами </li>
+                                        <li class="course-programm__sublist-item">Покрытие: схема выравнивания (база или гель на выбор), покрытие гель лаком под кутикулу, выравнивание топом;</li>
+                                        <li class="course-programm__sublist-item">Дизайн (разбор основных дизайнов);</li>
+                                    </ul>
+                                </li>
+                                <li class="course-programm__additional accordeon-item">
+                                    <div class="accordeon-item__trigger">ДОПОЛНИТЕЛЬНО </div>
+                                    <ul class="course-programm__additional-sublist accordeon-item__content">
+                                        <li class="course-programm__sublist-item">Методическое пособие в подарок со всем материалом курса и схемами;</li>
+                                        <li class="course-programm__sublist-item">Доступ к моему телеграмм-каналу со всеми материалами/оборудованием и ссылками на проверенные магазины;</li>
+                                        <li class="course-programm__sublist-item">Методы ремонта ногтей акригелем/гелем;</li>
+                                        <li class="course-programm__sublist-item">Схемы укрепления ногтей даже для самых сложных рук;</li>
+                                        <li class="course-programm__sublist-item">Отслойки материала (разбор более 20 причин и как их избежать).</li>
+                                        <li class="course-programm__sublist-item">Научу правильно делать фото работ для Instagram (положение рук, схемы света, приложения для фото, макро-фото и т.д.);</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <p class="course-lasting accordeon-item__trigger">Длительность — 2 дня </p>
+                            <div class="course-lasting__content accordeon-item__content">
+                                <table class="course-lasting-table">
+                                    <tr><th>1-й день:</th><th></th></tr>
+                                    <tr><td>Теория:</td><td>10:00 - 12:00</td></tr>
+                                    <tr><td>Обед:</td><td>12:00 - 12:30</td></tr>
+                                    <tr><td>Практика:</td><td>12:30 - 19:00</td></tr>
+                                </table>
+                                <p class="course-lasting-subtable">(отработка на себе, работа с камуфлирующей базой/гелем на выбор + возможен дизайн по успеваемости)</p>
+                                <table class="course-lasting-table">
+                                    <tr><th>2-й день:</th><th></th></tr>
+                                    <tr><td>Дизайны:</td><td>10:00 - 11:30</td></tr>
+                                    <tr><td>Обед:</td><td>11:30 - 12:00</td></tr>
+                                    <tr><td>Практика:</td><td>12:00 - 18:30</td></tr>
+                                </table>
+                                <p class="course-lasting-subtable">(Отработка на одной модели - 2 руки, работа с цветом)</p>
+                            </div>
+                            
+                            <ul class="course-features-list">
+                                <li class="course-features-list-item"><span class="icon pin"></span>Возможны задержки по мере успеваемости</li>
+                                <li class="course-features-list-item"><span class="icon check"></span>Все необходимые материалы и инструменты предоставляются. Методическое пособие вы забираете с собой, в стоимость курса включено.</li>
+                                <li class="course-features-list-item"><span class="icon certificate"></span>По окончанию курса выдаётся сертификат.</li>
+                                <li class="course-features-list-item"><span class="icon price"></span>Стоимость базового индивидуального курса <span class="bold">500BYN</span>.</li>
+                                <li class="course-features-list-item"><span class="icon savings"></span> Возможна рассрочка по договору на 2/3 месяца. Сумма с рассрочкой составляет <span class="bold">550BYN</span>.</li>
+                            </ul>
+                        </div>
+                        <div class="tabs__content-item tab-2">
+
+                            <ul class="course-programm">
+                                <li class="course-programm__theory accordeon-item">
+                                    <div class="accordeon-item__trigger">ТЕОРИЯ </div>
+                                    <ul class="course-programm__theory-sublist accordeon-item__content">
+                                        <li class="course-programm__sublist-item">Инструменты и оборудование;</li>
+                                        <li class="course-programm__sublist-item">Магазины с продукцией для ногтевого сервиса (телеграмм-канал со всем описанием и ссылками на магазины, где и что лучше покупать);</li>
+                                        <li class="course-programm__sublist-item">Дезинфекция, ПСО, Стерилизация, уход за инструментами;</li>
+                                    </ul>
+                                </li>
+                                <li class="course-programm__practice accordeon-item">
+                                    <div class="accordeon-item__trigger">ПРАКТИКА </div>
+                                    <ul class="course-programm__practice-sublist accordeon-item__content">
+                                        <li class="course-programm__sublist-item">Ускоренная техника снятия покрытия;</li>
+                                        <li class="course-programm__sublist-item">Схема опила квадрат/овал/миндаль;</li>
+                                        <li class="course-programm__sublist-item">Техника комбинированного маникюра с аппаратом и ножницами <span class="icon scissors"></span></li>
+                                        <li class="course-programm__sublist-item">Покрытие: схема выравнивания (база или гель на выбор), покрытие гель лаком под кутикулу, выравнивание топом;</li>
+                                    </ul>
+                                </li>
+                                <li class="course-programm__additional accordeon-item">
+                                    <div class="accordeon-item__trigger">ДОПОЛНИТЕЛЬНО </div>
+                                    <ul class="course-programm__additional-sublist accordeon-item__content">
+                                        <li class="course-programm__sublist-item">Методическое пособие в подарок со всем материалом курса и схемами;</li>
+                                        <li class="course-programm__sublist-item">Доступ к моему телеграмм-каналу со всеми материалами/оборудованием и ссылками на проверенные магазины;</li>
+                                        <li class="course-programm__sublist-item">Методы ремонта ногтей акригелем/гелем;</li>
+                                        <li class="course-programm__sublist-item">Схемы укрепления ногтей даже для самых сложных рук;</li>
+                                        <li class="course-programm__sublist-item">Отслойки материала (разбор более 20 причин и как их избежать).</li>
+                                        <li class="course-programm__sublist-item">Научу правильно делать фото работ для Instagram (положение рук, схемы света, приложения для фото, макро-фото и т.д.);</li>
+                                        <li class="course-programm__sublist-item">Более 20 проверенных мной способа ускорить свое время работы.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <p class="course-lasting accordeon-item__trigger">Длительность — 1 день  </p>
+                            <div class="course-lasting__content accordeon-item__content">
+                                <table class="course-lasting-table">
+                                    <tr><td>Теория:</td><td>10:00 - 12:00</td></tr>
+                                    <tr><td>Обед:</td><td>12:00 - 12:30</td></tr>
+                                    <tr><td>Практика:</td><td>12:30 - 18:30</td></tr>
+                                </table>
+                            </div>
+                            <ul class="course-features-list">
+                                <li class="course-features-list-item"><span class="icon pin"></span>Возможны задержки по мере успеваемости</li>
+                                <li class="course-features-list-item"><span class="icon check"></span>Все необходимые материалы и инструменты предоставляются. Методическое пособие вы забираете с собой, в стоимость курса включено.</li>
+                                <li class="course-features-list-item"><span class="icon certificate"></span>По окончанию курса выдаётся сертификат.</li>
+                                <li class="course-features-list-item"><span class="icon price"></span>Стоимость индивидуального повышения квалификации <span class="bold">280 BYN</span>.</li>
+                                <li class="course-features-list-item"><span class="icon savings"></span> Возможна рассрочка по договору на 2/3 месяца. Сумма с рассрочкой составляет <span class="bold">330 BYN</span>.</li>
+                            </ul>
+        
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="gallery" id="gallery">
+                <h3 class="gallery__title title">Работы учениц</h3>
+                <div class="photo-slider">
+                    <img class="photo-slider-item" src="img/nails/1.jpg" alt="nail_photo">
+                    <img class="photo-slider-item" src="img/nails/2.jpg" alt="nail_photo">
+                    <img class="photo-slider-item" src="img/nails/3.jpg" alt="nail_photo">
+                    <img class="photo-slider-item" src="img/nails/4.jpg" alt="nail_photo">
+                    <img class="photo-slider-item" src="img/nails/5.jpg" alt="nail_photo">
+                    <img class="photo-slider-item" src="img/nails/6.jpg" alt="nail_photo">
+                    <img class="photo-slider-item" src="img/nails/7.jpg" alt="nail_photo">
+                    <img class="photo-slider-item" src="img/nails/8.jpg" alt="nail_photo">
+                    <img class="photo-slider-item" src="img/nails/9.jpg" alt="nail_photo">
+                    <img class="photo-slider-item" src="img/nails/10.jpg" alt="nail_photo">
+                    <img class="photo-slider-item" src="img/nails/11.jpg" alt="nail_photo">
+                    <img class="photo-slider-item" src="img/nails/12.jpg" alt="nail_photo">
+                    <img class="photo-slider-item" src="img/nails/13.jpg" alt="nail_photo">
+                    <img class="photo-slider-item" src="img/nails/14.jpg" alt="nail_photo">
+                    <img class="photo-slider-item" src="img/nails/15.jpg" alt="nail_photo">
+                    <img class="photo-slider-item" src="img/nails/16.jpg" alt="nail_photo">
+                    <img class="photo-slider-item" src="img/nails/17.jpg" alt="nail_photo">
+                    <img class="photo-slider-item" src="img/nails/18.jpg" alt="nail_photo">
+                    <img class="photo-slider-item" src="img/nails/19.jpg" alt="nail_photo">
+                    <img class="photo-slider-item" src="img/nails/20.jpg" alt="nail_photo">
+                    <img class="photo-slider-item" src="img/nails/21.jpg" alt="nail_photo">
+                    <img class="photo-slider-item" src="img/nails/22.jpg" alt="nail_photo">
+                    <img class="photo-slider-item" src="img/nails/23.jpg" alt="nail_photo">
+                    <img class="photo-slider-item" src="img/nails/24.jpg" alt="nail_photo">
+                    <img class="photo-slider-item" src="img/nails/25.jpg" alt="nail_photo">
+                    <img class="photo-slider-item" src="img/nails/26.jpg" alt="nail_photo">
+                    <img class="photo-slider-item" src="img/nails/27.jpg" alt="nail_photo">
+                    <img class="photo-slider-item" src="img/nails/28.jpg" alt="nail_photo">
+                    <img class="photo-slider-item" src="img/nails/29.jpg" alt="nail_photo">
+                    <img class="photo-slider-item" src="img/nails/30.jpg" alt="nail_photo">
+                    <img class="photo-slider-item" src="img/nails/31.jpg" alt="nail_photo">
+                    <img class="photo-slider-item" src="img/nails/34.jpg" alt="nail_photo">
+                    <img class="photo-slider-item" src="img/nails/32.jpg" alt="nail_photo">
+                    <img class="photo-slider-item" src="img/nails/33.jpg" alt="nail_photo">
+                    
+                </div>
+            </section> 
+            <section class="benefits">
+                <h3 class="benefits__title title">Преимущества моих курсов:</h3>
+                    <div class="benefits__row">
+                        <div class="benefits__row-item"  ><img class="benefits__row-item-image" src="img/icons/individual.svg" alt="benefits_image"><p class="benefits__row-item-text">Курсы индивидуальные. Все материалы для работы предоставляются. <img class="benefits__row-item-text-icon" src="img/icons/top-info.svg" alt="nails_icon"></p></div>
+                        <div class="benefits__row-item"  ><img class="benefits__row-item-image" src="img/icons/journal.svg" alt="benefits_image"><p class="benefits__row-item-text">Конспектировать ничего не нужно: в подарок выдаётся проработанное методическое пособие.</p></div>
+                        <div class="benefits__row-item"  ><img class="benefits__row-item-image" src="img/icons/telegram.svg" alt="benefits_image"><p class="benefits__row-item-text">Постоянный доступ к Telegram-каналу с информацией о материалах, оборудовании для работы, ссылках на магазины.</p></div>
+                        <div class="benefits__row-item"  ><img class="benefits__row-item-image" src="img/icons/free-materials.svg" alt="benefits_image"><p class="benefits__row-item-text">На курсе разбирается работа с полигелем/гелем/базой, способы укрепления даже тех ногтей, на которых «ничего не держится», дизайны, фото и многое другое.</p></div>
+                        <div class="benefits__row-item"  ><img class="benefits__row-item-image" src="img/icons/certificate.svg" alt="benefits_image"><p class="benefits__row-item-text">Выдаю сертификат и всегда остаюсь с Вами на связи <span class="icon call-me-hand"></span></p></div>
+                    </div>    
+            </section>
+            <section class="testimonials" id="testimonials">
+                <h3 class="testimonials__title title">Отзывы учеников</h3>
+                <div class="testimonials-slider">
+            
+                            <div class="testimonials__card">
+                                <div class="testimonials__card-image">
+                                    <img src="img/testimonials/1_nails_by_zhuk.jpg" alt="photo">
+                                </div>
+                                <div class="testimonials__card-content">
+                                    <div class="testimonials__card-name">
+                                        <a href="https://www.instagram.com/nails_by_zhuk/" target="_blank"><img class="testimonials__icon-ig" src="img/icons/instagram-1.svg" alt="testimonials photo">nails_by_zhuk</a>  
+                                    </div>
+                                    <div class="testimonials__card-text">
+                                        +1 живой курс. Недавно я прошла обучение у Натальи. Мне все очень понравилось. Наконец-то я поняла как же все таки красить под кутикулу‚ так глубоко, Вы уже видели? А кутикула какая‚ блястиииць. Вообщем я очень благодарна Наталье что научила. Она даже в Макдональдс меня сводила. Этим днём я довольна на 100%. Мастера, если вы хотите делать маникюр лучше и качественнее, советую.
+                                    </div>
+                                    <div class="testimonials__card-rating">
+                                        <img src="img/icons/stars-rating.svg" alt="stars_image">
+                                    </div>
+                                </div>
+                            </div>          
+                            <div class="testimonials__card">
+                                <div class="testimonials__card-image">
+                                    <img src="img/testimonials/2_portunova_nails.jpg" alt="photo">
+                                </div>
+                                <div class="testimonials__card-content">
+                                    <div class="testimonials__card-name">
+                                        <a href="https://www.instagram.com/portunova_nails/" target="_blank"><img class="testimonials__icon-ig" src="img/icons/instagram-1.svg" alt="testimonials photo">portunova_nails</a>  
+                                    </div>
+                                    <div class="testimonials__card-text">
+                                        Спасибо, Наташа, что открыла для меня мир маникюра и ухоженных рук. Очень рада, что выбрала именно твой базовый курс. Теперь только практика. Кстати, девочки, совсем скоро буду набирать моделей для отработки. Так что, если среди вас есть смелые, буду рада поработать с вашими руками!
+                                    </div>
+                                    <div class="testimonials__card-rating">
+                                        <img src="img/icons/stars-rating.svg" alt="stars_image">
+                                    </div>
+                                </div>
+                            </div>          
+                            <div class="testimonials__card">
+                                <div class="testimonials__card-image">
+                                    <img src="img/testimonials/3_julia_prokhorenko.jpg" alt="photo">
+                                </div>
+                                <div class="testimonials__card-content">
+                                    <div class="testimonials__card-name">
+                                        <a href="https://www.instagram.com/julia_prokhorenko/" target="_blank"><img class="testimonials__icon-ig" src="img/icons/instagram-1.svg" alt="testimonials photo">julia_prokhorenko</a>  
+                                    </div>
+                                    <div class="testimonials__card-text">
+                                        Живой курс! 21.05.2022 прошла обучение у Натальи. Разложила всё по полочкам. Спасибо за то, что научила работать с гелем, шлифовать кутикулу и многое др. Ты лучшая в своём деле!
+                                    </div>
+                                    <div class="testimonials__card-rating">
+                                        <img src="img/icons/stars-rating.svg" alt="stars_image">
+                                    </div>
+                                </div>
+                            </div>          
+                            <div class="testimonials__card">
+                                <div class="testimonials__card-image">
+                                    <img src="img/testimonials/4_katushka.jpg" alt="photo">
+                                </div>
+                                <div class="testimonials__card-content">
+                                    <div class="testimonials__card-name">
+                                        Катюшка
+                                    </div>
+                                    <div class="testimonials__card-text">
+                                        Спасибо тебе большое! я буду тренироваться и будет отлично. А ты на самом деле хороший учитель и очень милая ко всему) я рада что выбрала именно тебя💖
+                                    </div>
+                                    <div class="testimonials__card-rating">
+                                        <img src="img/icons/stars-rating.svg" alt="stars_image">
+                                    </div>
+                                </div>
+                            </div>          
+                            <div class="testimonials__card">
+                                <div class="testimonials__card-image">
+                                    <img src="img/testimonials/5_lavnails_a.jpg" alt="photo">
+                                </div>
+                                <div class="testimonials__card-content">
+                                    <div class="testimonials__card-name">
+                                        <a href="https://www.instagram.com/lavnails_a/" target="_blank"><img class="testimonials__icon-ig" src="img/icons/instagram-1.svg" alt="testimonials photo">lavnails_a</a>  
+                                    </div>
+                                    <div class="testimonials__card-text">
+                                        Спасибо тебе большое) Я очень рада, что выбрала тебя, теперь буду всегда делать чисто, обещаю)) Друзья сказали, что работа очень чистая и идеальная, как будто бы отфотошопили))) Самостоятельную отработку пришлю, как будет время))
+                                    </div>
+                                    <div class="testimonials__card-rating">
+                                        <img src="img/icons/stars-rating.svg" alt="stars_image">
+                                    </div>
+                                </div>
+                            </div>      
+                            <div class="testimonials__card">
+                                <div class="testimonials__card-image">
+                                    <img src="img/testimonials/6_efremova_27_04.jpg" alt="photo">
+                                </div>
+                                <div class="testimonials__card-content">
+                                    <div class="testimonials__card-name">
+                                        <a href="https://www.instagram.com/efremova_27_04/" target="_blank"><img class="testimonials__icon-ig" src="img/icons/instagram-1.svg" alt="testimonials photo">efremova_27_04</a>  
+                                    </div>
+                                    <div class="testimonials__card-text">
+                                        Ну спасибо большое) Ни капли не жалею что выбрала именно тебя. Просто балдею ❤❤😻
+                                    </div>
+                                    <div class="testimonials__card-rating">
+                                        <img src="img/icons/stars-rating.svg" alt="stars_image">
+                                    </div>
+                                </div>
+                            </div>   
+                            <div class="testimonials__card">
+                                <div class="testimonials__card-image">
+                                    <img src="img/testimonials/7__nailsdin_.jpg" alt="photo">
+                                </div>
+                                <div class="testimonials__card-content">
+                                    <div class="testimonials__card-name">
+                                        <a href="https://www.instagram.com/_nailsdin_/" target="_blank"><img class="testimonials__icon-ig" src="img/icons/instagram-1.svg" alt="testimonials photo">_nailsdin_</a>  
+                                    </div>
+                                    <div class="testimonials__card-text">
+                                        Я прям кайфанула когда шлифовала, потому что сколько ни смотрела как делают у меня не получалось. И время по моему даже не увеличилось. Это реально оооочень красиво, ни разу не пожалела, что пошла именно к тебе, ты лучшая, спасиииибо большое❤
+                                    </div>
+                                    <div class="testimonials__card-rating">
+                                        <img src="img/icons/stars-rating.svg" alt="stars_image">
+                                    </div>
+                                </div>
+                            </div>              
+                            <div class="testimonials__card">
+                                <div class="testimonials__card-image">
+                                    <img src="img/testimonials/8_medvediha_ira.jpg" alt="photo">
+                                </div>
+                                <div class="testimonials__card-content">
+                                    <div class="testimonials__card-name">
+                                        <a href="https://www.instagram.com/medvediha_ira/" target="_blank"><img class="testimonials__icon-ig" src="img/icons/instagram-1.svg" alt="testimonials photo">medvediha_ira</a>  
+                                    </div>
+                                    <div class="testimonials__card-text">
+                                        Здравствуйте) спасибо вам за обучение, Нелли очень довольна осталась ☺. Подруги все с маникюром) у всех все носится отлично, сама себе тоже хорошо делает 👍☺ За 2,5-3 часа справляется. Мужской маникюр тоже хорошо получается.
+                                    </div>
+                                    <div class="testimonials__card-rating">
+                                        <img src="img/icons/stars-rating.svg" alt="stars_image">
+                                    </div>
+                                </div>
+                            </div>   
+                            <div class="testimonials__card">
+                                <div class="testimonials__card-image">
+                                    <img src="img/testimonials/9_zhiznevskayaa.jpg" alt="photo">
+                                </div>
+                                <div class="testimonials__card-content">
+                                    <div class="testimonials__card-name">
+                                        <a href="https://www.instagram.com/zhiznevskayaa/" target="_blank"><img class="testimonials__icon-ig" src="img/icons/instagram-1.svg" alt="testimonials photo">zhiznevskayaa</a>  
+                                    </div>
+                                    <div class="testimonials__card-text">
+                                        Спасибо тебе большое!) я рада что выбрала именно тебя❤ С выпиливанием пытаюсь подружиться, но кутикула с твоей техникой... я сижу и восхищаюсь то, насколько она идеальная) Ты прекрасна❣ никогда не перестану это говорить) Мне нравится с тобой общаться, ты очень вдохновляешь и мотивируешь) Ты прекрасный преподаватель!
+                                    </div>
+                                    <div class="testimonials__card-rating">
+                                        <img src="img/icons/stars-rating.svg" alt="stars_image">
+                                    </div>
+                                </div>
+                            </div>  
+                            <div class="testimonials__card">
+                                <div class="testimonials__card-image">
+                                    <img src="img/testimonials/10__ccatherina_.jpg" alt="photo">
+                                </div>
+                                <div class="testimonials__card-content">
+                                    <div class="testimonials__card-name">
+                                        <a href="https://www.instagram.com/_ccatherina_/" target="_blank"><img class="testimonials__icon-ig" src="img/icons/instagram-1.svg" alt="testimonials photo">_ccatherina_</a>  
+                                    </div>
+                                    <div class="testimonials__card-text">
+                                        Приветик. Я до сих пор не могу поверить, что мечта из детства сбылась. Так всё безумно интересно, понятно объясняешь. Ты просто прекраснейший человек❤ когда будет что-то не получаться, буду сразу вспоминать твои слова, которые ты мне всегда говорила.
+                                    </div>
+                                    <div class="testimonials__card-rating">
+                                        <img src="img/icons/stars-rating.svg" alt="stars_image">
+                                    </div>
+                                </div>
+                            </div>        
+                            <div class="testimonials__card">
+                                <div class="testimonials__card-image">
+                                    <img src="img/testimonials/11_alinaLomova.jpg" alt="photo">
+                                </div>
+                                <div class="testimonials__card-content">
+                                    <div class="testimonials__card-name">
+                                        Alina Lomova  
+                                    </div>
+                                    <div class="testimonials__card-text">
+                                        Спасибо тебе большое). Я очень рада, что выбрала тебя, теперь буду всегда делать чисто, обещаю)). Друзья сказали, что работа очень чистая и идеальная, как будто бы отфотошопили))). Самостоятельную отработку пришлю, как будет время))
+                                    </div>
+                                    <div class="testimonials__card-rating">
+                                        <img src="img/icons/stars-rating.svg" alt="stars_image">
+                                    </div>
+                                </div>
+                            </div>                             
+                        
+                        
+                </div>    
+                
+            </section>
+
+            <section class="video" id="video">
+                <h3 class="video__title title">Немного видео с курсов</h3>
+                <div class="video-slider">
+                    <div class="video-slider-item">
+                        <video class="video__item" poster="videos/posters/1.jpg" preload="metadata">
+                            <source type="video/webm" src="videos/1.webm">
+                            <source type="video/mp4" src="videos/1.mp4">
+                        </video>
+                        <button class="video-slider-item-btn"></button>
+                    </div>
+                    <div class="video-slider-item">
+                        <video class="video__item" poster="videos/posters/2.jpg" preload="metadata">
+                            <source type="video/webm" src="videos/2.webm">
+                            <source type="video/mp4" src="videos/2.mp4">
+                        </video>
+                        <button class="video-slider-item-btn"></button>
+                    </div>
+                    <div class="video-slider-item">
+                        <video class="video__item" poster="videos/posters/3.jpg" preload="metadata">
+                            <source type="video/webm" src="videos/3.webm">
+                            <source type="video/mp4" src="videos/3.mp4">
+                        </video>
+                        <button class="video-slider-item-btn"></button>
+                    </div>
+                    <div class="video-slider-item">
+                        <video class="video__item" poster="videos/posters/4.jpg" preload="metadata">
+                            <source type="video/webm" src="videos/4.webm">
+                            <source type="video/mp4" src="videos/4.mp4">
+                        </video>
+                        <button class="video-slider-item-btn"></button>
+                    </div>
+                    <div class="video-slider-item">
+                        <video class="video__item" poster="videos/posters/5.jpg" preload="metadata">
+                            <source type="video/webm" src="videos/5.webm">
+                            <source type="video/mp4" src="videos/5.mp4">
+                        </video>
+                        <button class="video-slider-item-btn"></button>
+                    </div>
+                    <div class="video-slider-item">
+                        <video class="video__item" poster="videos/posters/6.jpg" preload="metadata">
+                            <source type="video/webm" src="videos/6.webm">
+                            <source type="video/mp4" src="videos/6.mp4">
+                        </video>
+                        <button class="video-slider-item-btn"></button>
+                    </div>
+                    <div class="video-slider-item">
+                        <video class="video__item" poster="videos/posters/7.jpg" preload="metadata">
+                            <source type="video/webm" src="videos/7.webm">
+                            <source type="video/mp4" src="videos/7.mp4">
+                        </video>
+                        <button class="video-slider-item-btn"></button>
+                    </div>
+                    <div class="video-slider-item">
+                        <video class="video__item" poster="videos/posters/8.jpg" preload="metadata">
+                            <source type="video/webm" src="videos/8.webm">
+                            <source type="video/mp4" src="videos/8.mp4">
+                        </video>
+                        <button class="video-slider-item-btn"></button>
+                    </div>
+                    <div class="video-slider-item">
+                        <video class="video__item" poster="videos/posters/9.jpg" preload="metadata">
+                            <source type="video/webm" src="videos/9.webm">
+                            <source type="video/mp4" src="videos/9.mp4">
+                        </video>
+                        <button class="video-slider-item-btn"></button>
+                    </div>
+            
+                </div>
+                        
+                    
+            </section>
+            <section class="questions" id="questions">
+                <h3 class="questions__title title">Часто задаваемые вопросы</h3>
+                <div class="questions__item">
+                    <div class="questions__quest accordeon-item__trigger">
+                        С какого возраста можно приходить на курс?
+                    </div>
+                    <div class="questions__answer accordeon-item__content">
+                        C 14 лет при большом желании и с письменным разрешением родителей (заключается договор).
+                    </div>
+                </div>
+                <div class="questions__item">
+                    <div class="questions__quest accordeon-item__trigger">
+                        Реально ли обучится за два дня?
+                    </div>
+                    <div class="questions__answer accordeon-item__content">
+                        Маникюр - это техника. За два дня вы точно сможете понять эту технику. Дальше уже все в ваших руках и нужно будет только отрабатывать и набивать руку. Также курс индивидуальный и я слежу за каждым вашим движением и всё время посвящаю только вам. И после курса я всегда остаюсь на связи, проверяю ваши отработки и отвечаю на все вопросы. Поэтому если есть желание и заинтересованность в изучении новой профессии, то вам двух дней хватит.
+                    </div>
+                </div>
+                <div class="questions__item">
+                    <div class="questions__quest accordeon-item__trigger">
+                        Нужно ли приносить с собой что-нибудь на курс?
+                    </div>
+                    <div class="questions__answer accordeon-item__content">
+                        Нет, все материалы для работы я предоставляю. Также чай/кофе/конфетки/микроволновка есть в студии.
+                    </div>
+                </div>
+                <div class="questions__item">
+                    <div class="questions__quest accordeon-item__trigger">
+                        А я точно научусь делать ногти? Есть ли гарантия?
+                    </div>
+                    <div class="questions__answer accordeon-item__content">
+                        Дают ли гарантию на обучение в школе/колледже/универе? Нет. Но я могу дать гарантию на то, что если у вас будет огромное желание научиться - то мы сделаем шикарные ногти и вы узнаете всё, что вам нужно для этой профессии.
+                    </div>
+                </div>
+                <div class="questions__item">
+                    <div class="questions__quest accordeon-item__trigger">
+                        Я делаю ногти себе и подружкам, на какой курс мне идти?
+                    </div>
+                    <div class="questions__answer accordeon-item__content">
+                        Если у вас в месяц 2-5 клиентов (в том числе и вы сами), если у вас опыт работы меньше полугода - то тут точно нужен базовый курс. Но лучше пришлите фото своих работ и опыт работы, чтобы я смогла оценить конкретнее ваш случай.
+                    </div>
+                </div>
+                <div class="questions__item">
+                    <div class="questions__quest accordeon-item__trigger">
+                        Где купить все материалы и оборудование?
+                    </div>
+                    <div class="questions__answer accordeon-item__content">
+                        Для этого я создала для учениц отдельный телеграмм-канал, где расписала все материалы и оборудование, а также ссылки на проверенные магазины. Добавляю в телеграмм-канал до курса, чтобы вы смогли ознакомиться и заранее все купить.
+                    </div>
+                </div>
+
+            </section>
+            <section class="contacts" id="contacts">
+                        <div class="contacts__info"  >
+                            <h2 class="contacts__title title">Контакты</h2>
+                            <div class="contacts__content">
+                                <p class="contacts__content-text">Свяжитесь со мной одним из способов ниже</p>
+                                <div class="contacts__content-social">
+                                    <h3 class="contacts__subtitle"><span class="icon social-network">Соцсети</span></h3>
+                                    <div class="social-row">
+                                        <a href="#" class="social-row__item">
+                                            <img class="social-row__icon" src="img/icons/instagram-1.svg" alt="instagram_icon">
+                                            <span class="social-row__text">Instagram</span>
+                                        </a>
+                                        <a href="#" class="social-row__item">
+                                            <img class="social-row__icon" src="img/icons/telegram-1.svg" alt="telegram_icon">
+                                            <span class="social-row__text">Telegram</span>
+                                        </a>
+                                        <a href="https://vk.com/nata.kornilova" class="social-row__item" target="_blank">
+                                            <img class="social-row__icon" src="img/icons/vk-1.svg" alt="vk_icon">
+                                            <span class="social-row__text">Vk</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="contacts__content-phone">
+                                    <h3 class="contacts__subtitle"><span class="icon phone">Телефон</span></h3>
+                                    <a href="tel:+375445632356">+375 (44) 563-23-56</a>
+                                </div>
+                                <div class="contacts-content-adress">
+                                    <h3 class="contacts__subtitle"><span class="icon map">Адрес</span></h3>
+                                    <address>г.Гомель, ул. Тельмана 43</address>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contacts__map" >
+                            <img src="img/map_preload.jpg" alt="preloaded map">
+                            <!--<iframe src="https://yandex.by/map-widget/v1/-/CCUJuPT0tA" width="100%" height="400"></iframe>-->
+                        </div>
+            </section>
+        </main>
+    </div>
+        <footer class="footer">
+            <div class="wrapper">
+            УНП 12345678
+            
+            </div>
+        </footer>
+        
+    
+
+    <script src="js/jquery-3.6.0.slim.min.js"></script>
+    <script src="js/slick.min.js"></script>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

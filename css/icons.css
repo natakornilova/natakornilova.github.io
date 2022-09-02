@@ -1,0 +1,124 @@
+/*----------icons---------------*/
+.icon{
+    display:inline-block;
+    position: relative;
+}
+.icon::before{
+        content:'';
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top:-16px;
+        right:-23px;
+        background-size: cover;
+}
+.icon-arrow-up::before{
+    background-image: url('../img/icons/arrow-up.svg');
+}
+.icon-arrow-down::before{
+    background-image: url('../img/icons/arrow-up.svg');
+    transform: rotate(180deg);
+}
+.call-me-hand::before{
+    background-image: url('../img/icons/call-me-hand.svg');
+    width: 24px;
+    height: 24px;
+}
+.certificate::before{
+    background-image: url('../img/icons/certificate.svg');
+}
+.check::before{
+    background-image: url('../img/icons/check.svg');
+}
+.double-exclamation::before{
+    background-image: url('../img/icons/double-exclamation.svg');
+}
+.ok-hand::before{
+    background-image: url('../img/icons/ok-hand.svg');
+}
+.pin::before{
+    background-image: url('../img/icons/pin.svg');
+}
+.savings::before{
+    background-image: url('../img/icons/savings.svg');
+}
+.scissors{
+    max-width: 20px;
+}
+.smile::before{
+    background-image: url('../img/icons/smile.svg');
+}
+.waving-hand::before{
+    background-image: url('../img/icons/waving-hand.svg');
+    width: 32px;
+    height:32px;
+    right:-40px;
+    top:-25px;
+}
+.writing-hand::before{
+    background-image: url('../img/icons/writing-hand.svg');
+}
+.white-heart::before{
+    background-image: url('../img/icons/white-heart.svg');
+}
+.instagram::before{
+    background-image: url('../img/icons/instagram.svg');
+}
+.telegram::before{
+    background-image: url('../img/icons/telegram.svg');
+}
+.vk::before{
+    background-image: url('../img/icons/vk.svg');
+}
+.email::before{
+    background-image: url('../img/icons/email.svg');
+    left:-35px;
+    top:0;
+}
+.price::before{
+    background-image: url('../img/icons/price.svg');
+    left:-30px;
+}
+.phone::before{
+    background-image: url('../img/icons/phone.svg');
+    left:-35px;
+    top:0;
+}
+.map::before{
+    background-image: url('../img/icons/map.svg');
+    left:-35px;
+    top:0;
+}
+.manicure-base::before{
+    background-image: url('../img/icons/manicure-base.svg');
+    
+}
+.manicure-prof::before{
+    background-image: url('../img/icons/manicure-prof.svg');
+}
+.manicure-base::before, .manicure-prof::before{
+    border-radius: 17% 35% 15% 25%;
+    border:1px solid rgba(230, 211, 186, 1);
+    background-color: rgba(245, 213, 208, 0.8);
+    width:36px;
+    height:36px;
+    top:-25px;
+    left:-45px;
+}
+.pin::before, .check::before, .certificate::before, .savings::before{
+    top:-17px;
+    left:-25px;
+}
+.double-exclamation::before{
+    top:-16px;
+    left:-25px;
+}
+.social-network::before{
+    background-image: url('../img/icons/social-network.svg');
+    top:0;
+    left:-30px;
+}
+.benefits__row-item-text-icon{
+    max-width:22px;
+    margin-left: 10px;
+}
