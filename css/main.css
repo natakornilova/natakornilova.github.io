@@ -585,9 +585,9 @@ a.btn:focus{
     padding:20px;
     text-align: center;
 }
-.questions__quest.accordeon-item__trigger{
+/*.questions__quest.accordeon-item__trigger{
     padding: 10px 35px 10px 10px;
-}
+}*/
 .questions__quest.accordeon-item__trigger::after, .questions__quest.accordeon-item__trigger::before{
     width:15px;
     right:15px;
