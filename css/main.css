@@ -435,7 +435,7 @@ a.btn:focus{
 .accordeon-item__trigger:hover{
     border:1px solid rgba(46, 46, 46, 0.4);
     background-color: rgba(230, 211, 186, .2);
-    letter-spacing: 1.1px;
+    transform: scale(.99);
     color:#505050;
 }
 .accordeon-item__trigger::after, .accordeon-item__trigger::before{
@@ -471,12 +471,14 @@ a.btn:focus{
     background-color: rgba(230, 211, 186, .15);
     border-radius: 8px 8px 0 0;
     border-bottom:none;
+    transform: scale(.99);
 }
 .accordeon-item__trigger.accordeon-item--active~.accordeon-item__content{
     display: block;
     border: 1px solid rgba(168, 168, 168, 0.5);
     border-radius: 0 0 8px 8px;
     border-top: none;
+    transform: scale(.99);
 }
 /*-----------------------------*/
 /* gallery  */
@@ -909,9 +911,6 @@ a.btn:focus{
     transition: ease-in-out .3s;
     margin:0 10px;
     transform: scale(.8);
-    /*
-    outline:1px solid rgba(128, 128, 128, .5);
-    background-color:  rgba(128, 128, 128, .6);*/
     box-shadow: 0px 4px 6px 0px rgba(34, 60, 80, 0.4);
     border: 1px solid  rgba(128, 128, 128, .6);
     border-radius: 20px;
