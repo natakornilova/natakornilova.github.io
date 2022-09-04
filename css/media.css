@@ -27,6 +27,12 @@
         flex-direction: column;
         justify-content: space-around;
     }
+    .benefits__row-item:hover .benefits__row-item-text{
+        transform: none;
+    }
+    .benefits__row-item:hover .benefits__row-item-image{
+        transform: none;
+    }
 }
 @media (max-width: 905px) {
     .about__description-name {
@@ -122,7 +128,7 @@
     .contacts__map{
         align-self: stretch;
     }
-    .photo-slider .slick-slide{
+    .photo-slider .slick-slide, .photo-slider .slick-slide:hover, .photo-slider .slick-slide.slick-center:hover{
         transform: scale(.95);
     }
 }
