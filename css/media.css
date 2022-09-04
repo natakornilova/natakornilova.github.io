@@ -27,7 +27,6 @@
         flex-direction: column;
         justify-content: space-around;
     }
-    
 }
 @media (max-width: 905px) {
     .about__description-name {
@@ -55,7 +54,6 @@
         top:50%;
         transform: translateY(-50%);
         right:15px;
-        
     }
     .nav.open .nav__list{
         position: absolute;
@@ -81,7 +79,6 @@
     .nav__link{
         transition: none;
     }
-    
     .nav__link.active {
         color:#000;
     }
@@ -96,7 +93,6 @@
         margin-top: -73px;
         white-space: inherit;
         font-size: 60px;
-        
     }
     br{
         display: block;
