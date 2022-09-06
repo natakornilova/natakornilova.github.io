@@ -243,6 +243,8 @@
     .testimonials__card {
         margin:30px 10px 10px 10px;
     }
-
+    .video-slider-item video{
+        transform:none;
+    }
 }
 
