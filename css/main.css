@@ -951,3 +951,6 @@ a.btn:focus{
 
 
 /*-----------------------*/
+.slick-slide:focus, .slick-slide.slick-center:focus{
+    outline: none;
+}
