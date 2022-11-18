@@ -49,13 +49,9 @@ br{
 }
 /*-------------------------------*/
 .header{
-    /*border-radius: 15px 15px 0 0;*/
     color:#000;
     box-shadow: 0px 0px 7px 0px rgba(34, 60, 80, 0.17);
-    /*margin-top: 10px;*/
     padding:6px;
-    /*min-width:300px;*/
-    /*border-bottom: 1px solid rgba(34, 60, 80, 0.17);*/
 }
 .header__top {
     display: flex;
@@ -82,7 +78,6 @@ br{
 .nav__list {
     display:flex;
     justify-content: center;
-    
 }
 .nav__item:last-child{
     margin-right: 0;
@@ -94,7 +89,7 @@ br{
     padding:0 15px;
 }
 .nav__link:hover{
-    transition: ease-in .2s;
+    transition: ease-in .15s;
     box-shadow: 0px 0px 15px -2px rgba(230, 211, 186, 0.5) inset;
     border-radius: 17% 50% 15% 35%;
 }
@@ -190,19 +185,6 @@ a.btn:focus{
         transform: rotate(360deg);
     }
 }
-/* SCROLL */
-::-webkit-scrollbar {
-    width: 7px;
-}
-::-webkit-scrollbar-track {
-    background: #f1f1f1; 
-}
-::-webkit-scrollbar-thumb {
-    background: #888; 
-}
-::-webkit-scrollbar-thumb:hover {
-    background: #555; 
-}
 /*-------- about-teacher --------*/
 .about-teacher {
     margin-top: 70px;
@@ -215,9 +197,7 @@ a.btn:focus{
     margin: 20px;
     padding:20px 35px;
     flex-basis: 65%;
-    
     line-height: 1.3;
-    
 }
 .description__row{
     margin-top: 10px;
@@ -263,12 +243,9 @@ a.btn:focus{
 }
 .course__tabs {
     margin-top: 30px;
-    
 }
 .tabs {
-    
     border-radius: 0 0 25px 25px;
-
 }
 .tabs__nav {
     display:flex;
@@ -283,10 +260,13 @@ a.btn:focus{
     cursor: pointer;
     flex:1;
     color:rgba(0, 0, 0, 0.5);
-    border-bottom: 2px solid rgba(255, 192, 203, 0.5);
+    border-bottom: 2px solid rgba(230, 211, 186, 0.5);
+}
+.tabs__nav-item:nth-child(2){
+    border-bottom: 2px solid  rgba(255, 192, 203, 0.5);
 }
 .tabs__nav-item:last-child{
-    border-bottom: 2px solid rgba(230, 211, 186, 0.5);
+    border-bottom: 2px solid  rgba(149, 228, 46, 0.5);
 }
 .tabs__nav-item:not(.is-active):hover{
     color:#000;
@@ -298,8 +278,13 @@ a.btn:focus{
     border-radius: 10px 10px 0 0;
     border-bottom: none;
 }
-.tabs__nav-item.is-active:last-child {
+.tabs__nav-item.is-active:nth-child(2) {
     border: 2px solid rgba(255, 192, 203, 0.5);
+    border-radius: 10px 10px 0 0;
+    border-bottom: none;
+}
+.tabs__nav-item.is-active:last-child {
+    border: 2px solid rgba(149, 228, 46, 0.5);
     border-radius: 10px 10px 0 0;
     border-bottom: none;
 }
@@ -326,7 +311,18 @@ a.btn:focus{
     border-radius: 0 0 20px 20px;
     border-top: none;
 }
-                /*course-programm*/
+.tab-3 {
+    border: 2px solid rgba(149, 228, 46, 0.5);
+    border-radius: 0 0 20px 20px;
+    border-top: none;
+}
+.course__notification{
+    font-style: italic;
+    font-size: 22px;
+    text-align: center;
+    margin-top: 10px;
+}
+/*course-programm*/
 .course-programm>li {
     padding-left:30px;
     margin-top: 10px;
@@ -349,7 +345,6 @@ a.btn:focus{
 .course-programm__additional {
     background-image: url('../img/icons/add.svg');
 }
-
 .course-programm__sublist-item {
     line-height: 1.5;
     position: relative;
@@ -388,7 +383,23 @@ a.btn:focus{
     font-size: 20px;
     font-weight: bold;
 }
-.course-lasting-table {
+.course-lasting-day {
+}
+.course-lasting-day-number {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+.course-lasting-day-programm {
+    margin-top: 10px;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    padding:0 10px;
+}
+/*.course-lasting-table {
     border: 1px solid rgba(128, 128, 128, 0.3);
     margin: 0 auto 10px auto;
 }
@@ -402,7 +413,7 @@ a.btn:focus{
 .course-lasting-subtable {
     text-align: center;
     margin: 15px 0;
-}
+}*/
 .course-features-list {
     border-top: 1px solid rgba(128, 128, 128, 0.3);
     margin-top: 10px;
@@ -414,6 +425,13 @@ a.btn:focus{
 }
 .course-lasting__content{
     padding-top: 15px;
+}
+.for-students {
+text-align: center;
+}
+.for-students-string {
+    margin-top: 15px;
+
 }
 /* course-programm ACcordeon*/
 .accordeon-item__content{
@@ -429,7 +447,6 @@ a.btn:focus{
     border-radius: 8px;
     text-align: center;
     position: relative;
-    /*transition: ease-in .18s;*/
 }
 .accordeon-item__trigger:hover{
     border:1px solid rgba(46, 46, 46, 0.4);
@@ -443,7 +460,6 @@ a.btn:focus{
     width:12px;
     height: 3px;
     right:15px;
-    
     bottom:50%;
     transform:translateY(-50%);
     background-color: rgb(214, 194, 168);
@@ -729,9 +745,6 @@ a.btn:focus{
 .about__description-name--color{
     color:rgba(255, 255, 255, 0.6);
 }
-/*---- gallery ----*/
-
-/*--------------------*/
 /*-----------benefits---------------*/
 .benefits{
     margin-top:90px;
@@ -804,7 +817,6 @@ a.btn:focus{
         transform: scale(1.5);
         opacity: 0;
     }
-    
 }
 /* --- slider --- */
 /* Основные стили */
@@ -903,7 +915,6 @@ a.btn:focus{
 	border: 1px solid rgb(117, 117, 117);
 }
 /*-----------------------------------*/
-/* Конкретный слайдер */
 .photo-slider {
     margin-top: 35px;
 	position: relative;
@@ -949,9 +960,19 @@ a.btn:focus{
     transform:scale(0.99);
     border-radius: 20px;
 }
-
-
-/*-----------------------*/
 .slick-slide:focus, .slick-slide.slick-center:focus{
     outline: none;
+}
+/* SCROLL */
+::-webkit-scrollbar {
+    width: 7px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
 }

@@ -140,8 +140,6 @@
         font-size: 16px;
         padding:0;
     }
-    
-    
 }
 @media (max-width: 680px) {
     .testimonials__card {
@@ -170,6 +168,26 @@
     .benefits__row-item-text{
         font-size: 15px;
     }
+    .tabs__nav {
+        display:flex;
+        flex-direction: column;
+        font-size: 16px;
+    }
+    .tabs__nav-item.is-active{
+        order:1;
+    }
+    .tabs__nav-item{
+        border: 1px dashed rgba(230, 211, 186, 0.5);
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+    .tabs__nav-item.is-active {
+        border-bottom: none;
+        margin:0;
+    }
+    .tabs__nav-item:last-child, .tabs__nav-item:nth-child(2) {
+        border: 1px dashed rgba(230, 211, 186, 0.5);
+    }
 }
 @media (max-width: 430px) {
     .nav.open .nav__list{
@@ -191,15 +209,7 @@
         border-radius: 20px;
         font-size: 16px;
     }
-
-    .tabs__nav {
-        display:flex;
-        flex-direction: column;
-        font-size: 16px;
-    }
-    .tabs__nav-item.is-active{
-        order:1;
-    }
+    
     .course-programm{
         font-size: 15px;
     }
@@ -208,18 +218,6 @@
     }
     .course-programm__sublist-item::after{
         top: 16px;
-    }
-    .tabs__nav-item{
-        border: 1px dashed rgba(230, 211, 186, 0.5);
-        border-radius: 10px;
-        margin-bottom: 10px;
-    }
-    .tabs__nav-item.is-active {
-        border-bottom: none;
-        margin:0;
-    }
-    .tabs__nav-item:last-child{
-        border: 1px dashed rgba(230, 211, 186, 0.5);
     }
     .benefits__row-item{
         margin-top: 10px;

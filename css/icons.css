@@ -97,7 +97,10 @@
 .manicure-prof::before{
     background-image: url('../img/icons/manicure-prof.svg');
 }
-.manicure-base::before, .manicure-prof::before{
+.manicure-practice::before{
+    background-image: url('../img/icons/manicure-practice.svg');
+}
+.manicure-base::before, .manicure-prof::before, .manicure-practice::before{
     border-radius: 17% 35% 15% 25%;
     border:1px solid rgba(230, 211, 186, 1);
     background-color: rgba(245, 213, 208, 0.8);
