@@ -138,7 +138,7 @@ a.btn:hover {
     background-color: rgba(206, 189, 168, 0.7); 
     /*position: relative;
     top:-1px;*/
-    transform: rotate(-7deg);
+    transform: scale(1.1);
 }
 a.btn:focus{
     top:0px;
@@ -228,6 +228,7 @@ a.btn:focus{
     padding:5px 5px 5px 0;
     border-bottom: 1px solid #b3955dd0;
     cursor: pointer;
+    transition: all ease-in .2s;
 }
 .about-teacher__more-btn:hover{
     opacity:.3;
@@ -774,10 +775,12 @@ text-align: center;
     cursor: pointer;
 }
 .benefits__row-item:hover .benefits__row-item-text{
-    transform: rotate(4deg);
+    /*transform: rotate(4deg);*/
+    color: gray;
+    transform: scale(1.01);
 }
 .benefits__row-item:hover .benefits__row-item-image{
-    transform: rotate(-4deg);
+    transform: scale(1.1);
 }
 .benefits__row-item-text{
     text-align: center;
